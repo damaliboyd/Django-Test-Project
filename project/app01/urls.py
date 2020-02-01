@@ -18,7 +18,7 @@ from django.views.generic import TemplateView
 from app01.views import ParentListView, ParentDetailView
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name="index.html")),
+    path('', TemplateView.as_view(template_name="index.html"), name="home"),
     path('parents', ParentListView.as_view(), name="parents"),
     path('<int:pk>', ParentDetailView.as_view(), name="parent"),
 ]
