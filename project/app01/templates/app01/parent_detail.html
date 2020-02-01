@@ -1,3 +1,11 @@
 {% extends "base.html" %}
 
 {% block title%}{{object}}{% endblock %}
+
+{% block body %}
+
+  {% for children in object.child_set.all %}
+    <p>{{ children }}</p>
+  {% endfor %}
+
+{% endblock %}
